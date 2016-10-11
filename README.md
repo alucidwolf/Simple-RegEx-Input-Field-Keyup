@@ -7,7 +7,7 @@ Simple starting function to place in doc.ready so on keyup the input field remov
 ```
 
 ##Javascript
-*Put this in your document.ready function and change to the ID of your input field*
+*Put this in your document.ready function and change to the ID to that of your input field*
 ```
 $("#signupCode").on("keyup", function () {
     var val1 = $(this);
