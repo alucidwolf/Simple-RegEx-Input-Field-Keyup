@@ -10,11 +10,15 @@ Simple starting function to place in doc.ready so on keyup the input field remov
 *Put this in your document.ready function and change to the ID to that of your input field*
 ```
 $("#signupCode").on("keyup", function () {
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
     var val1 = $(this);
     var val2 = $(this).val();
     var regexVal = /[^[a-zA-Z0-9]]*/gi;
-    var newValue = val2.replace(regexVal, '');
+    var newValue = val2.replace(regexVal, '');                        
     val1.val(newValue);
+    this.setSelectionRange(start, end);
 });
 ```
 
+###This will also keep the cursor in the same spot even after checking for special characters
