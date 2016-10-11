@@ -22,3 +22,15 @@ $("#signupCode").on("keyup", function () {
 ```
 
 ###This will also keep the cursor in the same spot even after checking for special characters
+
+##If you are using bootstrap and want to trigger a tooltip for the user to indicate what the field requires, you can do it like this
+```
+$("#signupCode").on("keyup", function () {
+...
+...
+    this.setSelectionRange(start, end);
+}).tooltip({
+    'trigger'   : 'focus',
+    'title'     : 'No Special Characters Allowed'
+});
+```
