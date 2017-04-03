@@ -14,7 +14,7 @@ $("#signupCode").on("keyup", function () {
     var end = this.selectionEnd;
     var val1 = $(this);
     var val2 = $(this).val();
-    var regexVal = /[^[a-zA-Z0-9]]*/gi;
+    var regexVal = /[^a-zA-Z0-9]/gi;
     var newValue = val2.replace(regexVal, '');                        
     val1.val(newValue);
     this.setSelectionRange(start, end);
